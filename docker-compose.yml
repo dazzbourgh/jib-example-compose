@@ -13,4 +13,4 @@ services:
 
 networks:
   jib-network:
-    driver: bridge
+    driver: overlay
