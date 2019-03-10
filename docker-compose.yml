@@ -3,7 +3,7 @@ services:
   jib-example:
     image: dazzbourgh/jib-example:latest
     ports:
-      - "1489:8080"
+      - "1489:1489"
     deploy:
       replicas: 1
       restart_policy:
