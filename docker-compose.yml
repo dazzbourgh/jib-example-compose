@@ -1,0 +1,16 @@
+version: "3"
+services:
+  jib-example:
+    image: dazzbourgh/jib-example:latest
+    ports:
+      - "1489:8080"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - jib-network
+
+networks:
+  jib-network:
+    driver: bridge
