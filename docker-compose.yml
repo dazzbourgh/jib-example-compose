@@ -10,7 +10,7 @@ services:
         condition: on-failure
       labels:
         - "traefik.docker.network=traefik-net"
-        - "traefik.frontend.rule=Host:whoami.docker.localhost"
+        - "traefik.frontend.rule=Host:jib-example.docker.localhost"
 
 # created on the cluster beforehand
 networks:
