@@ -2,15 +2,14 @@ version: "3"
 services:
   jib-example:
     image: dazzbourgh/jib-example:latest
-    ports:
-      - "1489"
     deploy:
       replicas: 1
       restart_policy:
         condition: on-failure
       labels:
-        - "traefik.docker.network=traefik-net"
-        - "traefik.frontend.rule=Host:jib-example.docker.localhost"
+        - "traefik.backed=jib-example"
+        - "traefik.frontend.rule=PathPrefixStrip:/jib-example"
+        - "traefik.port=80"
 
 # created on the cluster beforehand
 networks:
