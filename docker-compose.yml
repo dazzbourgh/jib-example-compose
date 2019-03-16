@@ -9,7 +9,7 @@ services:
       labels:
         - "traefik.backend=jib-example-${JIB_BRANCH}"
         - "traefik.frontend.rule=PathPrefixStrip:/jib-example-${JIB_BRANCH}"
-        - "traefik.port=1489"
+        - "traefik.port=1500"
 
 # created on the cluster beforehand
 networks:
