@@ -7,7 +7,7 @@ services:
       restart_policy:
         condition: on-failure
       labels:
-        - "traefik.backend=jib-example"
+        - "traefik.backend=jib-example-${JIB_BRANCH}"
         - "traefik.frontend.rule=PathPrefixStrip:/jib-example-${JIB_BRANCH}"
         - "traefik.port=1489"
 
